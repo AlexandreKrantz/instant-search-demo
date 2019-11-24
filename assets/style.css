@@ -8,7 +8,8 @@ html {
   background: #FFF;
 }
 header, main, #no-results, footer {
-  width: 1000px;
+  width: 98%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 main {
@@ -16,11 +17,11 @@ main {
 }
 #left-column {
   float: left;
-  width: 23%;
+  width: 230px;
 }
 #right-column {
-  width: 74%;
-  margin-left: 26%;
+  width: auto;
+  margin-left: 260px;
 }
 
 .clear:after {
@@ -40,7 +41,7 @@ header img {
   top: 9px;
   left: 0;
   float: left;
-  max-width: 23%;
+  width: 230px;
 }
 .ais-search-box {
   max-width: none;
@@ -57,7 +58,7 @@ header img {
   fill: rgb(142, 142, 142);
 }
 #search-input {
-  margin-left: 26%;
+  margin-left: 260px;
 }
 #search-input input {
   font-size: 28px;
@@ -95,7 +96,7 @@ header img {
 }
 .hit-image {
   display: inline-block;
-  width: 16%;
+  width: 26%;
   text-align: center;
 }
 .hit-image img {
@@ -106,7 +107,7 @@ header img {
   font-size: 13px;
   font-weight: 300;
   display: inline-block;
-  width: 81%;
+  width: 71%;
   margin-left: 3%;
   vertical-align: top;
 }
@@ -521,7 +522,7 @@ a.clear-all:hover {
 /* FOOTER */
 footer {
   font-size: 14px;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -532,4 +533,54 @@ footer a {
 footer a:hover {
   text-decoration: underline;
   color: #ed5565;
+}
+
+/* Responsive */
+@media screen and (max-width: 770px) {
+
+  header, main, #no-results, footer {
+    width: 98%;
+  }
+  #left-column {
+    display: none;
+    width: 0%;
+  }
+  #right-column {
+    width: 100%;
+    margin-left: 0%;
+  }
+  header img {
+    display: none;
+  }
+
+  #search-input {
+    margin-left: 0%;
+    width: 100%;
+  }
+  .hit-image {
+    width: 26%;    
+  }
+
+  .hit-content {
+    display: inline-block;
+    width: 71%;
+    margin-left: 3%;
+  }
+
+}
+
+@media screen and (max-width: 540px) {
+  #stats .ais-stats--time {
+    display: none;
+  }
+  .hit-image {
+    width: 100%;    
+  }
+
+  .hit-content {
+    display: block;
+    width: 100%;
+  }
+
+
 }
